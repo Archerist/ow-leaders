@@ -1,0 +1,31 @@
+{
+  "name": "ow-leaders",
+  "version": "1.0.0",
+  "description": "Overwatch Leaderboards Bot for Discord",
+  "main": "src/app.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./dist/src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Archerist/ow-leaders.git"
+  },
+  "keywords": [
+    "overwatch",
+    "discord",
+    "bot",
+    "competitive"
+  ],
+  "author": "Archerist",
+  "license": "LGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Archerist/ow-leaders/issues"
+  },
+  "homepage": "https://github.com/Archerist/ow-leaders#readme",
+  "dependencies": {
+    "discord.js": "^14.8.0",
+    "typescript": "^5.0.2"
+  }
+}
