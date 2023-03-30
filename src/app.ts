@@ -1,6 +1,6 @@
 import * as Discord from "discord.js"
 import cfg from "../config.json" assert { type: 'json'}
-import * as commands from "./commands/index.js"
+import commands from "./commands/index.js"
 
 const client = new Discord.Client({intents:
     [
@@ -14,6 +14,13 @@ const client = new Discord.Client({intents:
 client.once(Discord.Events.ClientReady, c => {
     console.log(`Ready! Logged in as ${c.user.tag}`);
 });
+
+client.on("interactionCreate", async (interaction) =>{
+    if(!interaction.isChatInputCommand()) return
+    await commands.get(interaction.commandName)?.execute(interaction)
+})
+
+console.log(commands)
 
 client.login(cfg.token)
 
