@@ -1,4 +1,6 @@
 {
-    "token": "",
-    "application_id": ""
+    "discord_token": "",
+    "discord_application_id": "",
+    "blizzard_client_id":"",
+    "blizzard_client_secret":""
 }
