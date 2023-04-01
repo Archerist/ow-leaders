@@ -1,4 +1,4 @@
-import { BlizzAPI, RegionIdOrName } from "blizzapi"
+
 import cfg from "../../config.json"
 
 class Oauth{
@@ -6,16 +6,12 @@ class Oauth{
     clientSecret = cfg.blizzard_client_secret
     #authorizeURI = new URL("https://oauth.battle.net/authorize")
     #tokenURI = new URL("https://oauth.battle.net/token")
-    #client : BlizzAPI | undefined
 
-    public getClient(region:RegionIdOrName){
-        if(this.#client) return this.#client
+    public getToken(){
 
-        let token
+        
 
-        this.#client = new BlizzAPI({
-            region:region
-        })
-
+        return ""
     }
+
 }
